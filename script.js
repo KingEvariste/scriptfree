@@ -13,8 +13,10 @@ btn.onclick = ()=>{
       if (i == 9){
         clearInterval(URLinterval);
       }
-      window.open(url + `${i}`);
+      let top = (i%3) * 350;
+      let left = Math.floor(i/3) * 500;
+      window.open(url + `${i}`, `battle ${i}`, `width=500,height=350,left=${left},top=${top}`);
       i++;
-    },1000)
+    },500)
   }
 }
