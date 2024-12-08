@@ -5,7 +5,7 @@ const btn = document.getElementById("submit");
 const select = document.getElementById("select");
 
 btn.onclick = ()=>{
-  let url = input.value.trim();
+  let url = input.value.trim().replace(/ /gi,"");
   let varURL;
   if (url.length == 59){
     window.open(url);
@@ -19,7 +19,7 @@ btn.onclick = ()=>{
       let left = Math.floor(i/3) * 500;
       window.open(url + `${i}`, `battle ${i}`, `width=500,height=350,left=${left},top=${top}`);
       i++;
-    },500)
+    },100)
   }else if(select.value == 2){
     let n = 0;
     const URLinterval2 = setInterval(() => {
@@ -31,7 +31,7 @@ btn.onclick = ()=>{
       let left = Math.floor(n/5) * 250;
       window.open(url + `${chr}`, `battle ${n}`, `width=250,height=180,left=${left},top=${top}`);
       n++;
-    },500);
+    },100);
   }else{
     alert("NOT SUPPORTED YET")
   }
