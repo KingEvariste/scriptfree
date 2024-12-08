@@ -31,7 +31,7 @@ btn.onclick = ()=>{
       let left = Math.floor(n/5) * 250;
       window.open(url + `${chr}`, `battle ${n}`, `width=250,height=180,left=${left},top=${top}`);
       n++;
-    },700);
+    },500);
   }else{
     alert("NOT SUPPORTED YET")
   }
