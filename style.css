@@ -25,7 +25,7 @@ input {
   font-size: 20px;
   text-align: center;
 }
-button {
+#submit {
   display: block;
   padding: 7px;
   width: 200px;
@@ -34,6 +34,15 @@ button {
   margin-top: 20px;
   font-size: 20px;
 }
+
+#stop {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 200px;
+  height: 200px;
+}
+
 select {
   display: block;
   padding: 10px;

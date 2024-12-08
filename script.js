@@ -1,8 +1,14 @@
 const input = document.getElementById("input");
-
 const btn = document.getElementById("submit");
-
 const select = document.getElementById("select");
+const stop = document.getElementById("stop");
+let URLinterval = null;
+
+stop.onclick = () => {
+  if(URLinterval != null){
+    clearInterval(URLinterval);
+  }
+}
 
 btn.onclick = ()=>{
   let url = input.value.trim().replace(/ /gi,"");
@@ -11,9 +17,10 @@ btn.onclick = ()=>{
     window.open(url);
   }else if(select.value == 1){
     let i = 0;
-    const URLinterval = setInterval(()=>{
+    URLinterval = setInterval(()=>{
       if (i == 9){
         clearInterval(URLinterval);
+        URLinterval = null;
       }
       let top = (i%3) * 350;
       let left = Math.floor(i/3) * 500;
@@ -22,9 +29,10 @@ btn.onclick = ()=>{
     },100)
   }else if(select.value == 2){
     let n = 0;
-    const URLinterval2 = setInterval(() => {
+    URLinterval = setInterval(() => {
       if (n == 25){
-        clearInterval(URLinterval2);
+        clearInterval(URLinterval);
+        URLinterval = null;
       }
       let chr = String.fromCharCode(97 + n);
       let top = (n%5) * 180;
