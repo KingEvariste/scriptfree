@@ -33,8 +33,8 @@ btn.onclick = ()=>{
         stopped = false;
       }
       let chr = String.fromCharCode(97 + n);
-      let top = (n%3) * 400;
-      let left = Math.floor(n/3) * 700;
+      let top = (n%2) * 400;
+      let left = Math.floor(n/2) * 700;
       window.open(url + `${chr}`, `battle ${n}`, `width=700,height=400,left=${left},top=${top},titlebar=no`);
       n++;
     },300);
