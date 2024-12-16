@@ -28,7 +28,7 @@ btn.onclick = ()=>{
   }else if(select.value == 2){
     let n = 0;
     let URLinterval2 = setInterval(() => {
-      if (n == 5 || stopped == true){
+      if (n == 7 || stopped == true){
         clearInterval(URLinterval2);
         stopped = false;
       }
