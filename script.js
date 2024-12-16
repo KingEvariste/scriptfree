@@ -24,7 +24,7 @@ btn.onclick = ()=>{
       let left = Math.floor(i/3) * 500;
       window.open(url + `${i}`, `battle ${i}`, `width=500,height=350,left=${left},top=${top},titlebar=no`);
       i++;
-    },300)
+    },400)
   }else if(select.value == 2){
     let n = 0;
     let URLinterval2 = setInterval(() => {
@@ -37,7 +37,7 @@ btn.onclick = ()=>{
       let left = Math.floor(n/2) * 700;
       window.open(url + `${chr}`, `battle ${n}`, `width=700,height=450,left=${left},top=${top},titlebar=no`);
       n++;
-    },300);
+    },400);
   }else{
     alert("NOT SUPPORTED YET")
   }
