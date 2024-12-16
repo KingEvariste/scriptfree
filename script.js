@@ -33,9 +33,9 @@ btn.onclick = ()=>{
         stopped = false;
       }
       let chr = String.fromCharCode(97 + n);
-      let top = (n%5) * 180;
-      let left = Math.floor(n/5) * 250;
-      window.open(url + `${chr}`, `battle ${n}`, `width=250,height=180,left=${left},top=${top},titlebar=no`);
+      let top = (n%5) * 400;
+      let left = Math.floor(n/5) * 700;
+      window.open(url + `${chr}`, `battle ${n}`, `width=700,height=400,left=${left},top=${top},titlebar=no`);
       n++;
     },300);
   }else{
